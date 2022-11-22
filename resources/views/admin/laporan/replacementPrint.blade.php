@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Print Pengajuan Replacement Class</title>
+    <title>Print Pengajuan Replacement Class {{ $replacement->id }}</title>
 
     <style>
         body{
@@ -37,16 +37,15 @@
     <br>
     <p>Dengan ini memberitahukan bahwa</p>
 
-    @foreach ($replacement as $x)
     <table>
         <tr>
             <td>Nama Dosen</td>
-            <td>&emsp;&emsp;&emsp;: {{$x->nama_lengkap}}</td>
+            <td>&emsp;&emsp;&emsp;: {{ $replacement->nama_lengkap }}</td>
         </tr>
 
         <tr>
             <td>Mata Kuliah</td>
-            <td>&emsp;&emsp;&emsp;: {{$x->nama_mata_kuliah}}</td>
+            <td>&emsp;&emsp;&emsp;: {{ $replacement->nama_mata_kuliah }}</td>
         </tr>
 
         <tr>
@@ -56,7 +55,7 @@
 
         <tr>
             <td>Kelas</td>
-            <td>&emsp;&emsp;&emsp;: {{$x->kelas}}</td>
+            <td>&emsp;&emsp;&emsp;: {{ $replacement->kelas }}</td>
         </tr>
 
         <tr>
@@ -81,28 +80,28 @@
         <tr>
             <td>Yang semula pada</td>
             <td>&emsp;&emsp;&emsp;: Tanggal</td>
-            <td>&emsp;&emsp;: {{date('d M Y', strtotime($x->jadwal_tanggal_yang_akan_direplace))}}</td>
+            <td>&emsp;&emsp;: {{ date('d M Y', strtotime($replacement->jadwal_tanggal_yang_akan_direplace)) }}</td>
         </tr>
 
         <tr>
             <td></td>
             <td>&emsp;&emsp;&emsp;&nbsp; Waktu</td>
-            <td>&emsp;&emsp;: {{$x->jadwal_jam_kuliah}}</td>
+            <td>&emsp;&emsp;: {{ $replacement->jadwal_jam_kuliah }}</td>
         </tr>
 
         <tr>
             <td>Menjadi</td>
             <td>&emsp;&emsp;&emsp;: Tanggal</td>
-            <td>&emsp;&emsp;: {{date('d M Y', strtotime($x->tanggal_replacement))}}</td>
+            <td>&emsp;&emsp;: {{ date('d M Y', strtotime($replacement->tanggal_replacement))}}</td>
         </tr>
 
         <tr>
             <td></td>
             <td>&emsp;&emsp;&emsp;&nbsp; Waktu</td>
-            <td>&emsp;&emsp;: {{$x->jam_replacement}}</td>
+            <td>&emsp;&emsp;: {{$replacement->jam_replacement}}</td>
         </tr>
     </table>
-    @endforeach
+
     <br>
     <img src="{{ url('/foot.jpg') }}" alt="Foot">
 </body>

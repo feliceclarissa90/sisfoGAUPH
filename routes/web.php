@@ -26,8 +26,6 @@ Route::resource('admin/attendance', 'App\Http\Controllers\Admin\attendanceContro
 Route::resource('admin/reservation', 'App\Http\Controllers\Admin\reservationController');
 Route::resource('admin/schedule', 'App\Http\Controllers\Admin\scheduleController');
 Route::resource('admin/pengajuan-replacement-class', 'App\Http\Controllers\Admin\pengajuanReplacementClassController');
+Route::resource('admin/laporan/replacement', 'App\Http\Controllers\laporanController');
+Route::get('admin/laporan/replacement/{id}/pdf', [laporanController::class, 'pdf']);
 
-Route::controller(laporanController::class)->group(function () {
-    Route::get('admin/laporan/replacement', 'index');
-    Route::get('admin/laporan/replacement/pdf', 'cetak_pdf');
-});

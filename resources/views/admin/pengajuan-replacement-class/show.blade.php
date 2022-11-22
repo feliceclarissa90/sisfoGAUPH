@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">pengajuanReplacementClass {{ $pengajuanreplacementclass->id }}</div>
+                    <div class="card-header">Pengajuan Replacement Class {{ $pengajuanreplacementclass->id }}</div>
                     <div class="card-body">
 
                         <a href="{{ url('/admin/pengajuan-replacement-class') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
@@ -20,7 +20,7 @@
                             
                         </form>
 
-                        <a href="{{ url('/admin/laporan/replacement') }}" target="_blank"><button class="btn btn-secondary btn-sm"> Print</button></a>
+                        <a href="{{ url('/admin/laporan/replacement/'.$pengajuanreplacementclass->id) }}" target="_blank"><button class="btn btn-secondary btn-sm"> Print</button></a>
 
                         <br/>
                         <br/>

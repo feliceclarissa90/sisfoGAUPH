@@ -8,18 +8,18 @@ use PDF;
 
 class laporanController extends Controller
 {
-    public function index(){
+    public function show($id){
 
-        $replacement = pengajuanReplacementClass::all();
+        $replacement = pengajuanReplacementClass::findOrFail($id);
 
-        return view ('admin/laporan/replacementIndex', ['replacement'=>$replacement]);
+        return view ('admin.laporan.replacementIndex', compact('replacement'));
     }
 
-    public function cetak_pdf(){
+    public function pdf($id){
 
-        $replacement = pengajuanReplacementClass::all();
+        $replacement = pengajuanReplacementClass::findOrFail($id);
         
-        $pdf = PDF::loadview('admin/laporan/replacementPrint',['replacement'=>$replacement]);
+        $pdf = PDF::loadview('admin.laporan.replacementPrint', compact('replacement'));
 
         return $pdf->download('pengajuan-replacement');
     }
