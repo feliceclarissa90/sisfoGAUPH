@@ -33,10 +33,48 @@
         </li>
 
         <li class="nav-item">
+          <a href="{{ asset('admin/lesson') }}" class="nav-link">
+  
+            <i class="nav-icon fas fa-book"></i>
+            <p>
+              Lesson
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ asset('admin/location') }}" class="nav-link">
+  
+            <i class="nav-icon fas fa-music"></i>
+            <p>
+              Location
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ asset('admin/missing-item') }}" class="nav-link">
+            <i class="nav-icon fas fa-eye"></i>
+            <p>
+              Missing Item
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a href="{{ asset('admin/missing-item-status') }}" class="nav-link">
             <i class="nav-icon fas fa-eye"></i>
             <p>
               Missing Item Status
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ asset('admin/requested-missing-item') }}" class="nav-link">
+            <i class="nav-icon fas fa-bookmark"></i>
+            <p>
+              Requested Missing Item
             </p>
           </a>
         </li>
@@ -60,10 +98,37 @@
         </li>
 
         <li class="nav-item">
+          <a href="{{ asset('admin/room') }}" class="nav-link">
+            <i class="nav-icon fas fa-hashtag"></i>
+            <p>
+              Room
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a href="{{ asset('admin/schedule') }}" class="nav-link">
             <i class="nav-icon fas fa-book"></i>
             <p>
               Schedule
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ asset('admin/student') }}" class="nav-link">
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              Student
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ asset('admin/user') }}" class="nav-link">
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              User
             </p>
           </a>
         </li>

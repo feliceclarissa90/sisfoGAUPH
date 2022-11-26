@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class user extends Model
+class missingItem extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'users';
+    protected $table = 'missing_items';
 
     /**
     * The database primary key value.
@@ -25,7 +25,7 @@ class user extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_role_id', 'email', 'name', 'password'];
+    protected $fillable = ['item_code', 'title', 'category_id', 'location_id', 'description', 'missing_item_status_id', 'img_url', 'taken_at', 'taken_by'];
 
     
 }
